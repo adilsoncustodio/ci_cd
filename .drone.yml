@@ -1,0 +1,19 @@
+kind: pipeline
+type: docker
+name: build-test
+
+steps:
+  - name: build
+    image: alpine
+    commands:
+      - echo "Compilando aplicação..."
+      - sleep 2
+      - echo "Build completo ✅"
+
+  - name: test
+    image: alpine
+    commands:
+      - echo "Rodando testes..."
+      - sleep 2
+      - echo "Testes passaram ✅"
+
